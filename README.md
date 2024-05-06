@@ -32,7 +32,7 @@ https://github.com/shamzahasan88/HHDraggableView.git
 
 ## Preview
 
-![](https://reignsol.com/public/github-assets/hhdraggableview.gif)
+![](https://reignsol.com/public/github-assets/hhdraggableview.gif?new=1)
 
 ## How to use
 
