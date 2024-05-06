@@ -1,6 +1,6 @@
 # HHDraggableView
 
-[![CI Status](https://img.shields.io/travis/Hamza Hasan/HHDraggableView.svg?style=flat)](https://travis-ci.org/Hamza Hasan/HHDraggableView)
+[![CI Status](https://img.shields.io/travis/shamzahasan88/HHDraggableView.svg?style=flat)](https://travis-ci.org/Hamza Hasan/HHDraggableView)
 [![Version](https://img.shields.io/cocoapods/v/HHDraggableView.svg?style=flat)](https://cocoapods.org/pods/HHDraggableView)
 [![License](https://img.shields.io/cocoapods/l/HHDraggableView.svg?style=flat)](https://cocoapods.org/pods/HHDraggableView)
 [![Platform](https://img.shields.io/cocoapods/p/HHDraggableView.svg?style=flat)](https://cocoapods.org/pods/HHDraggableView)

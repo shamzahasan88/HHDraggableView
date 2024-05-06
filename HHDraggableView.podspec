@@ -10,6 +10,7 @@ Pod::Spec.new do |s|
   s.name             = 'HHDraggableView'
   s.version          = '0.1.0'
   s.summary          = 'A customizable UIView for iOS that can be dragged around the screen, with options for inertia and snapping to edges.'
+  s.swift_versions = ['5.0', '5.1', '5.2']
 
 # This description is used to generate tags and improve search results.
 #   * Think: What does it do? Why did you write it? What is the focus?
@@ -37,7 +38,7 @@ DESC
   s.source           = { :git => 'https://github.com/shamzahasan88/HHDraggableView.git', :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
-  s.ios.deployment_target = '10.0'
+  s.ios.deployment_target = '12.0'
 
   s.source_files = 'HHDraggableView/Classes/**/*'
   
