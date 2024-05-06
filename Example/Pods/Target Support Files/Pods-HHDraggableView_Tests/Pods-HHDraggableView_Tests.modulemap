@@ -1,0 +1,6 @@
+framework module Pods_HHDraggableView_Tests {
+  umbrella header "Pods-HHDraggableView_Tests-umbrella.h"
+
+  export *
+  module * { export * }
+}

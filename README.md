@@ -9,9 +9,7 @@
 
 To run the example project, clone the repo, and run `pod install` from the Example directory first.
 
-## Requirements
-
-## Installation
+## Installation With CocoaPods
 
 HHDraggableView is available through [CocoaPods](https://cocoapods.org). To install
 it, simply add the following line to your Podfile:
@@ -19,6 +17,37 @@ it, simply add the following line to your Podfile:
 ```ruby
 pod 'HHDraggableView'
 ```
+
+## Installation With Swift Package Manager
+
+`HHDraggableView` can be installed using Swift Package Manager.
+
+1. In Xcode open **File/Swift Packages/Add Package Dependency...** menu.
+
+2. Copy and paste the package URL:
+
+```
+https://github.com/shamzahasan88/HHDraggableView.git
+```
+
+## Preview
+
+![](https://reignsol.com/public/github-assets/hhdraggableview.gif)
+
+## How to use
+
+### UIView
+- Add an UIView in storyboard and assign it `HHDraggableUIView` or create `HHDraggableUIView` in swift directly
+
+### Properties
+- `isDraggable` | `Bool` | `Default: true` (UIView should be able to move or not)
+- `applyInertia` | `Bool` | `Default: true` (Either UIView should move at the end of dragging by itself or not)
+- `inertiaDuration` | `CGFloat` | `Default: 1.5` (Duration for how long should inertia last)
+- `friction` | `CGFloat` | `Default: 2.0` (Value that affects inertia, more friction, quicker inertia will end)
+- `keepInScreen` | `Bool` | `Default: true` (Either UIView should be kept with in the screen or should go outside as well)
+- `snapToSides` | `Bool` | `Default: false` (Either the UIView should move to either side of screen or not)
+
+### It is highly recommended to use either `applyInertia` or `snapToSides`. DO NOT use or make both of them `true` at a time
 
 ## Author
 

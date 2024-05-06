@@ -1,0 +1,22 @@
+{
+  "name": "HHDraggableView",
+  "version": "0.1.0",
+  "summary": "A short description of HHDraggableView.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/Hamza Hasan/HHDraggableView",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "Hamza Hasan": "shamzahasan88@gmail.com"
+  },
+  "source": {
+    "git": "https://github.com/Hamza Hasan/HHDraggableView.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "10.0"
+  },
+  "source_files": "HHDraggableView/Classes/**/*"
+}
