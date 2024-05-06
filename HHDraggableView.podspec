@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'HHDraggableView'
-  s.version          = '0.1.0'
+  s.version          = '0.1.2'
   s.summary          = 'A customizable UIView for iOS that can be dragged around the screen, with options for inertia and snapping to edges.'
   s.swift_versions = ['5.0', '5.1', '5.2']
 
