@@ -20,16 +20,30 @@ public class HHDraggableUIView: UIView {
     @IBInspectable var keepInScreen: Bool = true
     @IBInspectable var friction: CGFloat = 2.0
     @IBInspectable var snapToSides: Bool = false
-
+    @IBInspectable var snapDuration: CGFloat = 0.1
     
     public override init(frame: CGRect) {
         super.init(frame: frame)
         setupDraggableBehavior()
+        if snapToSides {
+            snapViewToSides(in: self.superview ?? self)
+        }
     }
     
     required public init?(coder: NSCoder) {
         super.init(coder: coder)
         setupDraggableBehavior()
+        if snapToSides {
+            snapViewToSides(in: self.superview ?? self)
+        }
+    }
+    
+    public override func layoutSubviews() {
+        super.layoutSubviews()
+        setupDraggableBehavior()
+        if snapToSides {
+            snapViewToSides(in: self.superview ?? self)
+        }
     }
     
     private func setupDraggableBehavior() {
@@ -76,20 +90,27 @@ public class HHDraggableUIView: UIView {
         self.center = newCenter
     }
     
-    private func snapViewToSides(in superview: UIView, velocity: CGPoint) {
+    private func snapViewToSides(in superview: UIView, velocity: CGPoint? = nil) {
         let leftDistance = self.center.x
         let rightDistance = superview.bounds.width - self.center.x
 
         var targetX: CGFloat = leftDistance < rightDistance ? superview.bounds.minX + self.bounds.width / 2 : superview.bounds.maxX - self.bounds.width / 2
-
-        // Optional: Adjust for velocity to make snapping feel more dynamic
-        if velocity.x > 500 {  // Swipe right
-            targetX = superview.bounds.maxX - self.bounds.width / 2
-        } else if velocity.x < -500 {  // Swipe left
-            targetX = superview.bounds.minX + self.bounds.width / 2
+        
+        if let velocity = velocity {
+            if velocity.x > 500 {
+                targetX = superview.bounds.maxX - self.bounds.width / 2
+            } else if velocity.x < -500 {
+                targetX = superview.bounds.minX + self.bounds.width / 2
+            }
+        } else {
+            if self.frame.origin.x < superview.frame.origin.x {
+                targetX = superview.bounds.minX + self.bounds.width / 2
+            } else {
+                targetX = superview.bounds.maxX - self.bounds.width / 2
+            }
         }
-
-        UIView.animate(withDuration: 0.3, delay: 0, options: .curveEaseOut, animations: {
+        
+        UIView.animate(withDuration: snapDuration, delay: 0, options: .curveEaseOut, animations: {
             self.center = CGPoint(x: targetX, y: self.center.y)
         }, completion: nil)
     }

@@ -46,6 +46,7 @@ https://github.com/shamzahasan88/HHDraggableView.git
 - `friction` | `CGFloat` | `Default: 2.0` (Value that affects inertia, more friction, quicker inertia will end)
 - `keepInScreen` | `Bool` | `Default: true` (Either UIView should be kept with in the screen or should go outside as well)
 - `snapToSides` | `Bool` | `Default: false` (Either the UIView should move to either side of screen or not)
+- `snapDuration` | `CGFloat` | `Default: 0.1` (Duration of snapping UIView for sides)
 
 ### It is highly recommended to use either `applyInertia` or `snapToSides`. DO NOT use or make both of them `true` at a time
 
